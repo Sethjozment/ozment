@@ -33,4 +33,11 @@ hist(shower$logRate)
 body <- read.csv("http://emp.byui.edu/johnsonc/data/BodyMeasurements.csv")
 head(body)
 names(body)
+names(body)[5] <- "Height"
+names(body)
 
+summary(body$Height)
+hist(body$Height, xlab = "Height (inches)", ylab = "Frequency",
+     main = "Heights of men at BYU")
+
+mean(body$Height, trim = 0.05)
