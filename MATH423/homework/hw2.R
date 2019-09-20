@@ -25,7 +25,7 @@ variance2 = (1/(num - 1))*(sum((temp$celsius^2)) - num*(avg)^2)
 
 # d)
 std_dev = sqrt((1/(num - 1))*(sum((temp$celsius^2)) - num*(avg)^2))
-sd(temp$celsius)
+sdc <- sd(temp$celsius)
 
 # f)
 temp$kelvin <- temp$celsius + 273.15
@@ -34,3 +34,12 @@ mean(temp$kelvin)
 mean(temp$fahrenheit)
 sd(temp$kelvin)
 sd(temp$fahrenheit)
+
+sdf <- sdc * (9/5)
+
+# 4)
+# Creates a boxplot for a particular data set
+set.seed(999);
+boxplot(round(100-10*rchisq(50,1),0),
+        main="Histogram",
+        xlab="Dollars", horizontal = TRUE)
