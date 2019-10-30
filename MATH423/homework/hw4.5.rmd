@@ -1,0 +1,346 @@
+---
+title: "Hw 15 4.5"
+author: "Seth Ozment"
+date: "10/30/2019"
+output: 
+  html_document:
+    theme: cerulean
+    code_folding: hide
+
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+```
+
+
+```{r}
+# 1)
+# Simulate 500000 observations of a Weibull RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 1
+beta <- 1
+sim <- data.frame(Weibull = rweibull(n=500000, shape=alpha, scale=beta))
+# Create a histogram of the simulated data in sim$Weibull
+ggplot(data=sim, aes(sim$Weibull)) +
+  geom_histogram(aes(y = ..density..),
+                 breaks=seq(min(sim$Weibull)-0.1, max(sim$Weibull)+0.1, by = .05),
+                 col="blue", fill="blue", alpha=.2) +
+  labs(title=paste("Simulated Data from a Weibull( alpha =",alpha,
+                   ", beta =",beta,") Distribution"),
+       x="Raw Data",
+       y="Relative Frequency") +
+  theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Weibull)
+var(sim$Weibull)
+```
+
+```{r}
+# 2)
+# Simulate 500000 observations of a Weibull RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 1
+beta <- 2
+sim <- data.frame(Weibull = rweibull(n=500000, shape=alpha, scale=beta))
+# Create a histogram of the simulated data in sim$Weibull
+ggplot(data=sim, aes(sim$Weibull)) +
+  geom_histogram(aes(y = ..density..),
+                 breaks=seq(min(sim$Weibull)-0.1, max(sim$Weibull)+0.1, by = .05),
+                 col="blue", fill="blue", alpha=.2) +
+  labs(title=paste("Simulated Data from a Weibull( alpha =",alpha,
+                   ", beta =",beta,") Distribution"),
+       x="Raw Data",
+       y="Relative Frequency") +
+  theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Weibull)
+var(sim$Weibull)
+```
+
+```{r}
+# 3)
+# Simulate 500000 observations of a Weibull RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 2
+beta <- 1
+sim <- data.frame(Weibull = rweibull(n=500000, shape=alpha, scale=beta))
+# Create a histogram of the simulated data in sim$Weibull
+ggplot(data=sim, aes(sim$Weibull)) +
+  geom_histogram(aes(y = ..density..),
+                 breaks=seq(min(sim$Weibull)-0.1, max(sim$Weibull)+0.1, by = .05),
+                 col="blue", fill="blue", alpha=.2) +
+  labs(title=paste("Simulated Data from a Weibull( alpha =",alpha,
+                   ", beta =",beta,") Distribution"),
+       x="Raw Data",
+       y="Relative Frequency") +
+  theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Weibull)
+var(sim$Weibull)
+```
+
+```{r}
+# 4)
+# Simulate 500000 observations of a Weibull RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 2
+beta <- 0.5
+sim <- data.frame(Weibull = rweibull(n=500000, shape=alpha, scale=beta))
+# Create a histogram of the simulated data in sim$Weibull
+ggplot(data=sim, aes(sim$Weibull)) +
+  geom_histogram(aes(y = ..density..),
+                 breaks=seq(min(sim$Weibull)-0.1, max(sim$Weibull)+0.1, by = .05),
+                 col="blue", fill="blue", alpha=.2) +
+  labs(title=paste("Simulated Data from a Weibull( alpha =",alpha,
+                   ", beta =",beta,") Distribution"),
+       x="Raw Data",
+       y="Relative Frequency") +
+  theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Weibull)
+var(sim$Weibull)
+```
+
+```{r}
+# 5)
+# Simulate 500000 observations of a Weibull RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 10
+beta <- 0.5
+sim <- data.frame(Weibull = rweibull(n=500000, shape=alpha, scale=beta))
+# Create a histogram of the simulated data in sim$Weibull
+ggplot(data=sim, aes(sim$Weibull)) +
+  geom_histogram(aes(y = ..density..),
+                 breaks=seq(min(sim$Weibull)-0.1, max(sim$Weibull)+0.1, by = .05),
+                 col="blue", fill="blue", alpha=.2) +
+  labs(title=paste("Simulated Data from a Weibull( alpha =",alpha,
+                   ", beta =",beta,") Distribution"),
+       x="Raw Data",
+       y="Relative Frequency") +
+  theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Weibull)
+var(sim$Weibull)
+```
+
+```{r}
+# 6)
+# Simulate 500000 observations of a Weibull RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 10
+beta <- 1
+sim <- data.frame(Weibull = rweibull(n=500000, shape=alpha, scale=beta))
+# Create a histogram of the simulated data in sim$Weibull
+ggplot(data=sim, aes(sim$Weibull)) +
+  geom_histogram(aes(y = ..density..),
+                 breaks=seq(min(sim$Weibull)-0.1, max(sim$Weibull)+0.1, by = .05),
+                 col="blue", fill="blue", alpha=.2) +
+  labs(title=paste("Simulated Data from a Weibull( alpha =",alpha,
+                   ", beta =",beta,") Distribution"),
+       x="Raw Data",
+       y="Relative Frequency") +
+  theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Weibull)
+var(sim$Weibull)
+```
+
+```{r}
+# 7)
+# Simulate 500000 observations of a Weibull RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 10
+beta <- 2
+sim <- data.frame(Weibull = rweibull(n=500000, shape=alpha, scale=beta))
+# Create a histogram of the simulated data in sim$Weibull
+ggplot(data=sim, aes(sim$Weibull)) +
+  geom_histogram(aes(y = ..density..),
+                 breaks=seq(min(sim$Weibull)-0.1, max(sim$Weibull)+0.1, by = .05),
+                 col="blue", fill="blue", alpha=.2) +
+  labs(title=paste("Simulated Data from a Weibull( alpha =",alpha,
+                   ", beta =",beta,") Distribution"),
+       x="Raw Data",
+       y="Relative Frequency") +
+  theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Weibull)
+var(sim$Weibull)
+```
+
+----
+
+```{r}
+# Simulate 500000 observations of a standard beta RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 1
+beta <- 1
+sim <- data.frame(Beta = rbeta(n=500000, shape1=alpha, shape2=beta))
+# Create a histogram of the simulated data in sim$Beta
+ggplot(data=sim, aes(sim$Beta)) +
+geom_histogram(aes(y = ..density..),
+breaks=seq(-0.05, 1.05, by = .01),
+col="blue", fill="blue", alpha=.2) +
+labs(title=paste("Simulated Data from a Standard Beta( alpha =",alpha,
+", beta =",beta,") Distribution"),
+x="Raw Data",
+y="Relative Frequency") +
+theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Beta)
+var(sim$Beta)
+```
+
+```{r}
+# Simulate 500000 observations of a standard beta RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 0.5
+beta <- 0.5
+sim <- data.frame(Beta = rbeta(n=500000, shape1=alpha, shape2=beta))
+# Create a histogram of the simulated data in sim$Beta
+ggplot(data=sim, aes(sim$Beta)) +
+geom_histogram(aes(y = ..density..),
+breaks=seq(-0.05, 1.05, by = .01),
+col="blue", fill="blue", alpha=.2) +
+labs(title=paste("Simulated Data from a Standard Beta( alpha =",alpha,
+", beta =",beta,") Distribution"),
+x="Raw Data",
+y="Relative Frequency") +
+theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Beta)
+var(sim$Beta)
+```
+
+```{r}
+# Simulate 500000 observations of a standard beta RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 2
+beta <- 1
+sim <- data.frame(Beta = rbeta(n=500000, shape1=alpha, shape2=beta))
+# Create a histogram of the simulated data in sim$Beta
+ggplot(data=sim, aes(sim$Beta)) +
+geom_histogram(aes(y = ..density..),
+breaks=seq(-0.05, 1.05, by = .01),
+col="blue", fill="blue", alpha=.2) +
+labs(title=paste("Simulated Data from a Standard Beta( alpha =",alpha,
+", beta =",beta,") Distribution"),
+x="Raw Data",
+y="Relative Frequency") +
+theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Beta)
+var(sim$Beta)
+```
+
+```{r}
+# Simulate 500000 observations of a standard beta RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 3
+beta <- 1
+sim <- data.frame(Beta = rbeta(n=500000, shape1=alpha, shape2=beta))
+# Create a histogram of the simulated data in sim$Beta
+ggplot(data=sim, aes(sim$Beta)) +
+geom_histogram(aes(y = ..density..),
+breaks=seq(-0.05, 1.05, by = .01),
+col="blue", fill="blue", alpha=.2) +
+labs(title=paste("Simulated Data from a Standard Beta( alpha =",alpha,
+", beta =",beta,") Distribution"),
+x="Raw Data",
+y="Relative Frequency") +
+theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Beta)
+var(sim$Beta)
+```
+
+```{r}
+# Simulate 500000 observations of a standard beta RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 5
+beta <- 1
+sim <- data.frame(Beta = rbeta(n=500000, shape1=alpha, shape2=beta))
+# Create a histogram of the simulated data in sim$Beta
+ggplot(data=sim, aes(sim$Beta)) +
+geom_histogram(aes(y = ..density..),
+breaks=seq(-0.05, 1.05, by = .01),
+col="blue", fill="blue", alpha=.2) +
+labs(title=paste("Simulated Data from a Standard Beta( alpha =",alpha,
+", beta =",beta,") Distribution"),
+x="Raw Data",
+y="Relative Frequency") +
+theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Beta)
+var(sim$Beta)
+```
+
+```{r}
+# Simulate 500000 observations of a standard beta RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 1
+beta <- 5
+sim <- data.frame(Beta = rbeta(n=500000, shape1=alpha, shape2=beta))
+# Create a histogram of the simulated data in sim$Beta
+ggplot(data=sim, aes(sim$Beta)) +
+geom_histogram(aes(y = ..density..),
+breaks=seq(-0.05, 1.05, by = .01),
+col="blue", fill="blue", alpha=.2) +
+labs(title=paste("Simulated Data from a Standard Beta( alpha =",alpha,
+", beta =",beta,") Distribution"),
+x="Raw Data",
+y="Relative Frequency") +
+theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Beta)
+var(sim$Beta)
+```
+
+```{r}
+# Simulate 500000 observations of a standard beta RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 2
+beta <- 2
+sim <- data.frame(Beta = rbeta(n=500000, shape1=alpha, shape2=beta))
+# Create a histogram of the simulated data in sim$Beta
+ggplot(data=sim, aes(sim$Beta)) +
+geom_histogram(aes(y = ..density..),
+breaks=seq(-0.05, 1.05, by = .01),
+col="blue", fill="blue", alpha=.2) +
+labs(title=paste("Simulated Data from a Standard Beta( alpha =",alpha,
+", beta =",beta,") Distribution"),
+x="Raw Data",
+y="Relative Frequency") +
+theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Beta)
+var(sim$Beta)
+```
+
+```{r}
+# Simulate 500000 observations of a standard beta RV
+# Define the parameters alpha and beta, then simulate the data
+alpha <- 2
+beta <- 5
+sim <- data.frame(Beta = rbeta(n=500000, shape1=alpha, shape2=beta))
+# Create a histogram of the simulated data in sim$Beta
+ggplot(data=sim, aes(sim$Beta)) +
+geom_histogram(aes(y = ..density..),
+breaks=seq(-0.05, 1.05, by = .01),
+col="blue", fill="blue", alpha=.2) +
+labs(title=paste("Simulated Data from a Standard Beta( alpha =",alpha,
+", beta =",beta,") Distribution"),
+x="Raw Data",
+y="Relative Frequency") +
+theme_bw()
+# Compute the mean and variance of the simulated data
+mean(sim$Beta)
+var(sim$Beta)
+```
+
+```{r}
+# Create a normal probability plot of
+# the first 100 values in sim$Beta
+qqnorm(sim$Beta[1:100])
+```
+
